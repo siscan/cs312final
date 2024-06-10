@@ -24,6 +24,7 @@ ssh -i ../minecraft_server_key ec2-user@$INSTANCE_PUBLIC_IP << EOF
   sudo mkdir -p /opt/minecraft
   cd /opt/minecraft
   sudo wget -O server.jar https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
+  sleep 60
   sudo java -Xmx1024M -Xms1024M -jar /opt/minecraft/server.jar nogui
   echo 'eula=true' | sudo tee ./eula.txt
   echo 'difficulty=normal' | sudo tee -a /opt/minecraft/server.properties
