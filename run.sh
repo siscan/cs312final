@@ -59,6 +59,7 @@ EOT
 sudo systemctl daemon-reload
 sudo systemctl enable minecraft
 sudo systemctl start minecraft
+sudo java -Xmx1024M -Xms1024M -jar /opt/minecraft/server.jar nogui
 EOF
 
 # Print the connection details
